@@ -5,5 +5,14 @@
 	version="2.2">
 	<persistence-unit name="default"
 		transaction-type="RESOURCE_LOCAL">
+		<description>Default persistence unit</description>
+		<class>com.zensark.javaeedemo.entities.Product</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:h2:mem:ekom"/>
+			<property name="javax.persistence.jdbc.user" value="db"/>
+			<property name="javax.persistence.jdbc.password" value="db@123"/>
+			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
+		</properties>
 	</persistence-unit>
 </persistence>
