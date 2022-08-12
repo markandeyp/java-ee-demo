@@ -16,7 +16,7 @@
 	  		const userName = document.querySelector('#userName').value;
 	  		const email = document.querySelector('#email').value;
 
-	  		fetch(`/ekom/user?username=${userName}&email=${email}`)
+	  		fetch(`/javaee/user?username=${userName}&email=${email}`)
 	  		.then(res=>res.json())
 	  		.then(res=>{document.querySelector('#result').innerText = JSON.stringify(res)})
 	  		.catch(console.log);
